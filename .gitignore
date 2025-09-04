@@ -43,3 +43,6 @@ testem.log
 .DS_Store
 Thumbs.db
 src/chat-room_project/.gitignore
+src/chat-room_project/.angular/cache/19.2.15/chat-room_project
+src/chat-room_project/node_modules/.bin
+src/chat-room_project/node_modules/.pnpm
