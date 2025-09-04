@@ -1,9 +1,16 @@
 <Section class="chat_display">
-    <ul>
-        <li></li>
-    </ul>
-</Section>
-<section class="chat_bar">
-<button class="chat_send_button">Send</button>
-
-</section>
+    <section class="chat_message_list">
+      @for (msg of chatMessages; track msg.id) {
+        <section class="chat_message">
+          <strong>{{ msg.senderName }}</strong> : {{ msg.message }} <em>({{ msg.timestamp }})</em>
+        </section>
+      }
+    </section>
+  </Section>
+  
+  <section class="chat_bar">
+    <button class="chat_send_button">Send</button>
+    <p>Chat room comp work</p>
+  </section>
+  
+  
