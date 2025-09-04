@@ -15,11 +15,13 @@
 </p>
 
 ---
+
 <p>
 This repository will contain a ChatRoom project, where a real-time chat application will be developed to enable users to communicate with each other in shared, interactive rooms. The project will demonstrate key concepts such as messaging, user management, and real-time updates</p>
 
 <p>the first wireframe with the idea of the project</p>
 <img src="doc\Wire frame 1.svg" style="width: 70vw; height: auto"/>
+
 ---
 
 ### Built With
