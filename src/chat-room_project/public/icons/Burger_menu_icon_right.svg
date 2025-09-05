@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126.37701054247077 45.48116296314015" width="126.37701054247077" height="45.48116296314015" class="icon">
+  <!-- svg-source:excalidraw -->
+  <metadata></metadata>
+  <defs>
+    <style class="style-fonts">
+    </style>
+  </defs>
+  <g stroke-linecap="round">
+    <g transform="translate(10 10) rotate(0 53 0)">
+      <path d="M0 0 C17.67 0, 88.33 0, 106 0 M0 0 C17.67 0, 88.33 0, 106 0" stroke="currentColor" stroke-width="4" fill="none"></path>
+    </g>
+  </g>
+  <mask></mask>
+  <g stroke-linecap="round">
+    <g transform="translate(36.614074405711904 35.48116296314015) rotate(0 39.77316175386119 0)">
+      <path d="M0 0 C13.26 0, 66.29 0, 79.55 0 M0 0 C13.26 0, 66.29 0, 79.55 0" stroke="currentColor" stroke-width="4" fill="none"></path>
+    </g>
+  </g>
+  <mask></mask>
+  <g stroke-linecap="round">
+    <g transform="translate(24.576427879150742 21.90804555319926) rotate(0 45.900291331660014 0)">
+      <path d="M0 0 C15.3 0, 76.5 0, 91.8 0 M0 0 C15.3 0, 76.5 0, 91.8 0" stroke="currentColor" stroke-width="4" fill="none"></path>
+    </g>
+  </g>
+  <mask></mask>
+</svg>

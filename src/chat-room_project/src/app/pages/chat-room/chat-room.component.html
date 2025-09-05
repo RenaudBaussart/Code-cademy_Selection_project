@@ -1,16 +1,28 @@
-<Section class="chat_display">
+<Section class="chat_display" [style.background-image]="'url(' + backgroundUrl + ')'">
+
     <section class="chat_message_list">
-      @for (msg of chatMessages; track msg.id) {
-        <section class="chat_message">
-          <strong>{{ msg.senderName }}</strong> : {{ msg.message }} <em>({{ msg.timestamp }})</em>
-        </section>
-      }
+        @for (msg of chatMessages; track msg.id) {
+            <section class="chat_message">
+            <strong>{{ msg.senderName }}</strong> : {{ msg.message }} <em>({{ msg.timestamp }})</em>
+            </section>
+        }
     </section>
-  </Section>
+
   
-  <section class="chat_bar">
-    <button class="chat_send_button">Send</button>
-    <p>Chat room comp work</p>
-  </section>
+    <section class="chat_bar">
+        <input type="text" class="chat_writing_bar" placeholder="Enter you message...">
+        <button class="chat_send_button base_button">Send</button>
+    </section>
+    <section class="copyright_label">
+        <p>Copyright © 2025 Baussart Renaud — Distributed under <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License 2.0</a></p>
+    </section>
+
+    <section class="drop_down_menu">
+        <button class="burger_menu_button">
+            <img src="icons/Burger_menu_icon_centered.svg" alt="Burger menu icon">
+        </button>
+    </section>
+
+</Section>
   
   

@@ -1,12 +1,103 @@
-.chatdisplay{
+.chat_display {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr) 0.5fr;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr) 0.15fr;
+    grid-template-rows: repeat(4, 1fr) 0.3fr 0.2fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    .chat_message_list{
+    background-position: 0;
+    background-size: cover;
+
+    .chat_message_list {
         display: flex;
         flex-direction: column;
+        grid-area: 1 / 1 / 5 / 5;
+        justify-content: flex-end;
+        height: 100%;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.18);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(9px);
+        -webkit-backdrop-filter: blur(9px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .chat_bar {
+        grid-area: 5 / 1 / 6 / 5;
+        display: flex;
+        align-items: center;
+        background-color: rgb(194, 194, 194);
+        border-radius: 0 0 10px 0;
+
+        .chat_send_button {
+            width: 5vw;
+            height: 5vh;
+            margin-right: 0.5vw;
+            
+        }
+
+        .chat_writing_bar {
+            flex: 1;
+            max-height: 70%;
+            background: none;
+            border: none;
+            &:focus{
+                border: none;
+                outline: none;
+                box-shadow: none;
+                background: none;
+            }
+        }
+
 
     }
+
+    .copyright_label {
+        grid-area: 6 / 1 / 7 / 6;
+        p{
+            color: rgb(165, 234, 255);
+            a:visited{
+                color: aqua;
+            }
+        }
+    }
+
+    .drop_down_menu {
+        grid-area: 1 / 5 / 6 / 6;
+        display: flex;
+        justify-content: center;
+
+        .burger_menu_button {
+            background: rgba(255, 255, 255, 0.6);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(9px);
+            -webkit-backdrop-filter: blur(9px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: none;
+            margin: 1vh 0.5vw;
+            border-radius: 10px;
+            width: 70%;
+            height: 4%;
+            
+
+            &:hover {
+                background-color: rgb(209, 209, 209);
+                border-radius: 10px;
+                top: 1px;
+                box-shadow: 10px 10px 12px -7px rgba(0, 0, 0, 0.75);
+            }
+
+            &:active {
+                position: relative;
+                top: 1px;
+                background-color: white;
+                box-shadow: none;
+            }
+        }
+    }
+
+
 }

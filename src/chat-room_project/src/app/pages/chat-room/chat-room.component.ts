@@ -9,6 +9,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './chat-room.component.scss'
 })
 export class ChatRoomComponent {
+  backgroundUrl ='site_background.jpg';
+
   //to make test
   chatMessages:Array<ChatMessage> = [ new ChatMessage(1, 'Alice', 'Bonjour à tous !'),
     new ChatMessage(2, 'Bob', 'Salut Alice !'),
