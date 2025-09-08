@@ -1,5 +1,5 @@
 <section class="screen_display">
-    
+
 <router-outlet />
 
     <section class="drop_down_menu">
@@ -12,8 +12,8 @@
         <div class="close_connection_panel" (click)="toggleDropdown()"></div>
         <!--for test purpose-->
         <section class="test_goto_button_container">
-            <button class="user_panel_goto_test base_button">user panel</button>
-            <button class="admin_panel_goto_test base_button">admin panel</button>
+            <button class="user_panel_goto_test base_button" (click)="goToUserpanel()">user panel</button>
+            <button class="admin_panel_goto_test base_button" (click)="goToAdminpanel()">admin panel</button>
         </section>
     }
 </section>

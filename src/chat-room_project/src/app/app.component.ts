@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { ChatRoomComponent } from './pages/chat-room/chat-room.component';
 import { CommonModule } from '@angular/common';
 import { UserDropdownPanelComponent } from './pages/user-dropdown-panel/user-dropdown-panel.component';
@@ -15,12 +15,19 @@ import { ConnectionDropdownPanelComponent } from './pages/connection-dropdown-pa
 })
 export class AppComponent {
   title = 'chat-room_project';
+  constructor(private router: Router){}
 
   isDropdownOpen: boolean = false;
 
   public toggleDropdown() {
     this.isDropdownOpen = !this.isDropdownOpen;
     console.log(this.isDropdownOpen + '')
+  }
+    public goToUserpanel(){
+      this.router.navigate(['/userpanel']);
+  }
+  public goToAdminpanel(){
+    this.router.navigate(['/adminpanel']);
   }
 
 }
