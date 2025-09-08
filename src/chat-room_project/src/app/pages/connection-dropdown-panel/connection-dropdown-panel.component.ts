@@ -7,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrl: './connection-dropdown-panel.component.scss'
 })
 export class ConnectionDropdownPanelComponent {
+  connectionTypePanelSelector:string = 'connection';
+  
+
+  public connectionTypeSelectInscription(){
+    this.connectionTypePanelSelector = 'inscription'
+  }
+  public connectionTypeSelectConnection(){
+    this.connectionTypePanelSelector = 'connection'
+  }
 
 }

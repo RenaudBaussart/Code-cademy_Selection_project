@@ -1,1 +1,38 @@
-<p>connection-dropdown-panel works!</p>
+<section class="connection_dropdown_panel_containeur">
+    <section class="connect_type">
+        <button class="connection_type_button base_button" (click)="connectionTypeSelectConnection()">Sign in</button>
+        <button class="inscription_type_button base_button"(click)="connectionTypeSelectInscription()">Sing up</button>
+    </section>
+    @if(connectionTypePanelSelector == 'connection'){
+        <section class="connection_container">
+            <form action="">
+                <label for="username">Username</label>
+                <input type="text" name='username' id="username">
+
+                <label for="password">Password</label>
+                <input type="text" name="password" id="password">
+
+                <input type="button" value="Sign in" class="base_button">
+            </form>
+        </section>
+    }
+    @if(connectionTypePanelSelector == 'inscription'){
+        <section class="inscription_container">
+            <form action="">
+                <label for="pseudo">Pseudo(show in chat)</label>
+                <input type="text" name='pseudo' id="pseudo">
+
+                <label for="username">Username</label>
+                <input type="text" name='username' id="username">
+
+                <label for="password">Password</label>
+                <input type="text" name="password" id="password">
+
+                <label for="password">Password confirm</label>
+                <input type="text" name="passwordConfirm" id="passwordConfirm">
+
+                <input type="button" value="Sing up" class="base_button">
+            </form>
+        </section>
+    }
+</section>
