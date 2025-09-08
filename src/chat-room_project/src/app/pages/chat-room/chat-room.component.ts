@@ -11,12 +11,8 @@ import { ConnectionDropdownPanelComponent } from '../connection-dropdown-panel/c
 })
 export class ChatRoomComponent {
   backgroundUrl ='site_background.jpg';
-  isDropdownOpen:boolean = false;
 
-  public toggleDropdown() {
-    this.isDropdownOpen = !this.isDropdownOpen;
-    console.log(this.isDropdownOpen + '')
-  }
+  
   //to make test
   chatMessages:Array<ChatMessage> = [ new ChatMessage(1, 'Alice', 'Bonjour à tous !'),
     new ChatMessage(2, 'Bob', 'Salut Alice !'),

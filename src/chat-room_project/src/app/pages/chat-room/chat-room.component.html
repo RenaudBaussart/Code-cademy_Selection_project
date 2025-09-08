@@ -1,3 +1,4 @@
+
 <Section class="chat_display" [style.background-image]="'url(' + backgroundUrl + ')'">
 
     <section class="chat_message_list">
@@ -17,16 +18,9 @@
         <p>Copyright © 2025 Baussart Renaud — Distributed under <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License 2.0</a></p>
     </section>
 
-    <section class="drop_down_menu">
-        <button class="burger_menu_button" (click)="toggleDropdown()">
-            <img src="icons/Burger_menu_icon_centered.svg" alt="Burger menu icon">
-        </button>
-    </section>
 
-    @if(isDropdownOpen){
-        <app-connection-dropdown-panel class="connection_panel_main"></app-connection-dropdown-panel>
-        <div class="close_connection_panel" (click)="toggleDropdown()"></div>
-    }
+    
+    
 </Section>
-  
+
   

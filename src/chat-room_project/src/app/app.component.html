@@ -1,3 +1,19 @@
-<app-chat-room class="chat_room_page"></app-chat-room>
-
+<section class="screen_display">
+    
 <router-outlet />
+
+    <section class="drop_down_menu">
+        <button class="burger_menu_button" (click)="toggleDropdown()">
+            <img src="icons/Burger_menu_icon_centered.svg" alt="Burger menu icon">
+        </button>
+    </section>
+    @if(isDropdownOpen){
+        <app-connection-dropdown-panel class="connection_panel_main"></app-connection-dropdown-panel>
+        <div class="close_connection_panel" (click)="toggleDropdown()"></div>
+        <!--for test purpose-->
+        <section class="test_goto_button_container">
+            <button class="user_panel_goto_test base_button">user panel</button>
+            <button class="admin_panel_goto_test base_button">admin panel</button>
+        </section>
+    }
+</section>
