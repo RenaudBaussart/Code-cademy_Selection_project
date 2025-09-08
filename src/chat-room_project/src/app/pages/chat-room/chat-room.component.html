@@ -18,10 +18,14 @@
     </section>
 
     <section class="drop_down_menu">
-        <button class="burger_menu_button">
+        <button class="burger_menu_button" (click)="toggleDropdown()">
             <img src="icons/Burger_menu_icon_centered.svg" alt="Burger menu icon">
         </button>
     </section>
+
+    @if(isDropdownOpen){
+        <app-connection-dropdown-panel class="connection_panel_main"></app-connection-dropdown-panel>}
+        <div class="close_connection_panel" (click)="toggleDropdown()"></div>
 
 </Section>
   
