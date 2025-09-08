@@ -1,0 +1,147 @@
+@import '../../../styles.scss';
+
+.user_panel_main_container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(224, 224, 224);
+    h1{
+        align-self: center;
+        font-size: larger;
+        text-align: center;
+        margin-bottom: 2vh;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: flex-start;
+
+        * {
+            margin-bottom: 0.5vh;
+        }
+
+        input[type="text"] ,input[type="password"] {
+            width: 80%;
+            padding: 0.5em 0.8em;
+            margin-bottom: 1em;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+            transition: border-color 0.25s ease;
+
+        }
+
+        input[type="button"] {
+            @extend .base_button;
+            width: 40%;
+        }
+    }
+    .section_card{
+        background: rgba(255, 255, 255, 0.36);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(6.5px);
+        -webkit-backdrop-filter: blur(6.5px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        width: 90%;
+        padding: 20px;
+    }
+
+    .user_account_info_container {
+        grid-area: 1 / 1 / 2 / 7;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: flex-start;
+        padding: 1vh 1vw;
+        h1{
+            text-align: start;
+        }
+        figure{
+            width: 5vw;
+            height: 5vw;
+            img{
+                border-radius: 50%;
+            }
+        }
+               
+    }
+
+    .change_account_pic_container {
+        grid-area: 2 / 1 / 6 / 3;
+        display: flex;
+        flex-direction: column;
+        margin-left: 2vw;
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .new_profile_pic_file_upload {
+            border: 2px dashed #28a0f0;
+            border-radius: 10px;
+            padding: 40px;
+            width: fit-content;
+            text-align: center;
+            cursor: pointer;
+            color: #28a0f0;
+            font-weight: bold;
+            align-self: center;
+
+            &:hover {
+                background-color: #e0f0ff;
+            }
+        }
+    }
+
+    .change_account_password_container {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: flex-start;
+        grid-area: 2 / 3 / 6 / 5;
+        form {
+            input[type="button"]{
+                width: fit-content;
+                align-self: flex-end;
+            }
+            
+        }
+    }
+
+    .delete_account__container {
+        grid-area: 2 / 5 / 6 / 7;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: flex-start;
+        p{
+            strong{
+                color: red;
+            }
+        }
+
+        form {
+            input[type="button"]{
+                width: fit-content;
+                align-self: flex-end;
+            }
+        }
+    }
+    .copyright_label {
+        grid-area: 6 / 1 / 7 / 6;
+        p{
+            color: rgb(0, 0, 0);
+            a:visited{
+                color: aqua;
+            }
+            width: 100vw;
+
+        }
+    }
+}

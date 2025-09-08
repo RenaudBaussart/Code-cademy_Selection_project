@@ -29,5 +29,8 @@ export class AppComponent {
   public goToAdminpanel(){
     this.router.navigate(['/adminpanel']);
   }
+  public goTohome(){
+    this.router.navigate(['/home'])
+  }
 
 }

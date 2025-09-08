@@ -3,6 +3,11 @@ export class ChatMessage {
     public senderName:string;
     public message:string;
     public timestamp: string;
+    //to make test
+    public static chatmessages:Array<ChatMessage> = [ new ChatMessage(1, 'Alice', 'Bonjour à tous !'),
+    new ChatMessage(2, 'Bob', 'Salut Alice !'),
+    new ChatMessage(null, 'Charlie', 'Bienvenue sur le chat.')];
+    //end of test
 
     constructor(id:number|null,senderName:string,message:string){
         if(id === null){
@@ -18,4 +23,5 @@ export class ChatMessage {
                  " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
         
     }
+
 }

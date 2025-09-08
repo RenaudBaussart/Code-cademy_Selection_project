@@ -10,14 +10,9 @@ import { ConnectionDropdownPanelComponent } from '../connection-dropdown-panel/c
   styleUrl: './chat-room.component.scss'
 })
 export class ChatRoomComponent {
+  chatMessages = ChatMessage.chatmessages;
   backgroundUrl ='site_background.jpg';
-
   
-  //to make test
-  chatMessages:Array<ChatMessage> = [ new ChatMessage(1, 'Alice', 'Bonjour à tous !'),
-    new ChatMessage(2, 'Bob', 'Salut Alice !'),
-    new ChatMessage(null, 'Charlie', 'Bienvenue sur le chat.')];
+  
 
-
-  //end of test
 }

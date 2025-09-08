@@ -1,47 +1,52 @@
-<section class="user_panel_main_container">
+<section class="user_panel_main_container" [style.background-image]="'url(' + backgroundUrl + ')'">
 
     <section class="user_account_info_container">
         <figure>
-            <img src="" alt="" />
-            <figcaption>picture used by user account</figcaption>
+            <img src="Portrait_Placeholder.png" alt="picture used by user account" />
         </figure>
+        <h1>Username placeholder</h1>
     </section>
 
-    <section class="change_account_pic_container">
+    <section class="change_account_pic_container section_card">
         <h1>Change account picture</h1>
-        <input type="image" />
+
+        <label for="new_profile_pic_file-upload" class="new_profile_pic_file_upload">
+            Click or drop to upload picture
+        </label>
+        <input type="file" name="new_profile_pic_file-upload" id="new_profile_pic_file-upload" accept="image/*">
 
     </section>
 
-    <section class="change_account_password_container">
+    <section class="change_account_password_container section_card">
         <h1>change password</h1>
         <form action="">
-                <label for="change_account_password_confirme">Old password</label>
-                <input type="text" name="change_account_password_confirme" id="delete_account_password_confirme">
+                <label for="change_account_password_old">Old password</label>
+                <input type="password" name="change_account_password_old" id="delete_account_password_old">
 
                 <label for="new_password">New password</label>
-                <input type="text" name="new_password" id="new_password">
+                <input type="password" name="new_password" id="new_password">
 
                 <label for="new_password_confirme">New password confirme</label>
-                <input type="text" name="new_password_confirme" id="new_password_confirme">
+                <input type="password" name="new_password_confirme" id="new_password_confirme">
 
-                <input type="button" value="change_account_password_button">
+                <input type="button" value="confirme password change">
             </form>
     </section>
 
-    <section class="delete_account__container">
+    <section class="delete_account__container section_card">
         <article>
             <h1>Delete your account</h1>
             <p><strong>Warning!</strong> this cant be undone.</p>
-
-            <form action="">
-                <label for="delete_account_password_confirme">Password</label>
-                <input type="text" name="delete_account_password_confirme" id="delete_account_password_confirme">
-                <input type="button" value="delete_account_button">
-            </form>
         </article>
         
+        <form action="">
+            <label for="delete_account_password_confirme">Password</label>
+            <input type="text" name="delete_account_password_confirme" id="delete_account_password_confirme">
+            <input type="button" value="delete account">
+        </form>
 
     </section>
-
+    <section class="copyright_label">
+        <p>Copyright © 2025 Baussart Renaud — Distributed under <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License 2.0</a></p>
+    </section>
 </section>

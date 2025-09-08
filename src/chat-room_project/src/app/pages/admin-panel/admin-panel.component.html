@@ -1,1 +1,29 @@
-<p>admin-panel works!</p>
+<section class="admin_panel_main_container" [style.background-image]="'url(' + backgroundUrl + ')'">
+
+    <section class="chat_message_list">
+        @for (msg of chatMessages; track msg.id) {
+        <section class="chat_message">
+            <strong>{{ msg.senderName }}</strong> : {{ msg.message }} <em>({{ msg.timestamp }})</em> <button class="delete_button base_button">X</button>
+        </section>
+        }
+    </section>
+
+    <section class="chat_bar">
+        <input type="text" class="chat_writing_bar" placeholder="Enter you message...">
+        <button class="chat_send_button base_button">Send</button>
+    </section>
+
+    <section class="user_list">
+        <h1>User list</h1>
+        <input type="text" name="user_search_filter" id="user_search_filter" class="user_search_filter">
+
+    </section>
+    <section class="banword_list">
+        <h1>Add a ban word</h1>
+         <input type="text" name="add_ban_word_bar" id="add_ban_word_bar" class="">
+         <input type="button" value="+" name="add_ban_word_button" id="add_ban_word_button" class="base_button add_button">
+    </section>
+    <section class="copyright_label">
+        <p>Copyright © 2025 Baussart Renaud — Distributed under <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License 2.0</a></p>
+    </section>
+</section>

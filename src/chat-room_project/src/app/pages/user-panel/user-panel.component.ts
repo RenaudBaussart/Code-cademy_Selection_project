@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './user-panel.component.scss'
 })
 export class UserPanelComponent {
-
+  backgroundUrl ='panel_background.jpg';
 }

@@ -1,0 +1,103 @@
+.admin_panel_main_container{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr) 0.5fr 0.25fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+
+    .chat_message_list {
+        grid-area: 1 / 1 / 6 / 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.18);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(9px);
+        -webkit-backdrop-filter: blur(9px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        margin: 0 ;
+        .chat_message{
+        }
+    }
+
+    .chat_bar {
+        grid-area: 6 / 1 / 7 / 3;
+        display: flex;
+        align-items: center;
+        background-color: rgb(194, 194, 194);
+        border-radius: 0 0 10px 0;
+
+        .chat_send_button {
+            width: 5vw;
+            height: 5vh;
+            margin-right: 0.5vw;
+            
+        }
+
+        .chat_writing_bar {
+            flex: 1;
+            max-height: 70%;
+            background: none;
+            border: none;
+            &:focus{
+                border: none;
+                outline: none;
+                box-shadow: none;
+                background: none;
+            }
+        }
+    }
+    .user_list{
+        grid-area: 1 / 3 / 7 / 4;
+        .user_search_filter{
+            
+        }
+    }
+    .banword_list{
+        grid-area: 1 / 4 / 7 / 5;
+        
+    }
+    .copyright_label {
+        grid-area: 7 / 1 / 8 / 5;
+        p{
+            color: rgb(255, 255, 255);
+            a:visited{
+                color: aqua;
+            }
+            width: 100vw;
+        }
+        background-color: black;
+    }
+    .user_list, .banword_list{
+    input[type=text]{
+        width: 60%;
+        padding: 0.5em 0.8em;
+        margin-bottom: 1em;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 1em;
+        transition: border-color 0.25s ease;
+    }
+    }
+}
+.delete_button {
+    background-image: linear-gradient(to bottom, #ed4545, #9e2626);
+    color: black;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.1% 0.5%;
+    border-radius: 5px;
+}
+.add_button{
+    background-image: linear-gradient(to bottom, #4bed45, #2a9e26);
+    color: black;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.1% 0.5%;
+    border-radius: 5px;
+}
