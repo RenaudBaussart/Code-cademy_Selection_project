@@ -4,14 +4,15 @@ export class ChatMessage {
     public message:string;
     public timestamp: string;
     //to make test
-    public static chatmessages:Array<ChatMessage> = [ new ChatMessage(1, 'Alice', 'Bonjour à tous !'),
-    new ChatMessage(2, 'Bob', 'Salut Alice !'),
+    public static idIndex:number = 0;
+    public static chatmessages:Array<ChatMessage> = [ new ChatMessage(null, 'Alice', 'Bonjour à tous !'),
+    new ChatMessage(null, 'Bob', 'Salut Alice !'),
     new ChatMessage(null, 'Charlie', 'Bienvenue sur le chat.')];
     //end of test
 
     constructor(id:number|null,senderName:string,message:string){
         if(id === null){
-            this.id=0;
+            this.id=ChatMessage.idIndex++;
         }
         else{
             this.id = id;
@@ -22,6 +23,14 @@ export class ChatMessage {
             this.timestamp = date.getDate() + "/" + (date.getMonth()+1) + "/" + date.getFullYear() +
                  " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
         
+    }
+
+    public static SendChat(chatMessage:string,user:string){
+        this.chatmessages.push(new ChatMessage(null,user,chatMessage));
+    }
+    public static RemoveChat(chatMessageId:number):boolean{
+        this.chatmessages = this.chatmessages.filter(msg => msg.id !== chatMessageId);
+        return true
     }
 
 }

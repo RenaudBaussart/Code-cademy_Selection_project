@@ -11,8 +11,8 @@
 
   
     <section class="chat_bar">
-        <input type="text" class="chat_writing_bar" placeholder="Enter you message...">
-        <button class="chat_send_button base_button">Send</button>
+        <input type="text" class="chat_writing_bar" placeholder="Enter you message..." [(ngModel)]="messageWaitingToSend" (keyup.enter)="SendChat()">
+        <button class="chat_send_button base_button" (click)="SendChat()">Send</button>
     </section>
     <section class="copyright_label">
         <p>Copyright © 2025 Baussart Renaud — Distributed under <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License 2.0</a></p>

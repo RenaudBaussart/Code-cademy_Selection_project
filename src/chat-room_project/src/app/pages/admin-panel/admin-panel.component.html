@@ -3,14 +3,14 @@
     <section class="chat_message_list">
         @for (msg of chatMessages; track msg.id) {
         <section class="chat_message">
-            <strong>{{ msg.senderName }}</strong> : {{ msg.message }} <em>({{ msg.timestamp }})</em> <button class="delete_button base_button">X</button>
+            <strong>{{ msg.senderName }}</strong> : {{ msg.message }} <em>({{ msg.timestamp }})</em> <button class="delete_button base_button" (click)='RemoveChat(msg.id)'>X</button>
         </section>
         }
     </section>
 
     <section class="chat_bar">
-        <input type="text" class="chat_writing_bar" placeholder="Enter you message...">
-        <button class="chat_send_button base_button">Send</button>
+        <input type="text" class="chat_writing_bar" placeholder="Enter you message..." [(ngModel)]="messageWaitingToSend" (keyup.enter)="SendChat()">
+        <button class="chat_send_button base_button" (click)="SendChat()">Send</button>
     </section>
 
     <section class="user_list">
