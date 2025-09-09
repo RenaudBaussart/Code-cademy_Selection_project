@@ -36,13 +36,14 @@ p, h1, h2, h3, h4, h5, h6 {
 .base_button {
   border-radius: 13px;
   color: #ffffff;
-  font-size: 20px;
   background-image: linear-gradient(to bottom, #45aaed, #26709e);
   border: none;
-  padding: 0.6em 1.2em;
+  padding: 0.3em 0.6em;
   cursor: pointer;
   transition: background-image 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
+  min-width: fit-content;
+  min-height: fit-content;
 
   &:hover {
     background-image: linear-gradient(to bottom, #3cb0fd, #3790cc);
@@ -65,6 +66,22 @@ p, h1, h2, h3, h4, h5, h6 {
     cursor: not-allowed;
     box-shadow: none;
     background-image: linear-gradient(to bottom, #a0a0a0, #707070);
+  }
+}
+
+body {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 18px;
   }
 }
 
